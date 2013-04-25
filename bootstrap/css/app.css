@@ -1,0 +1,60 @@
+
+
+    .ipsumWrap {
+      margin: 10px 0 0 40px;
+      padding: 0px;
+      background: #fff;
+      width: 300px;
+      float: left;
+      display: block;
+    }
+
+    .ipsumInput {
+      width: 80px;
+      float: right;
+      margin: 0 0 50px 0;
+    }
+
+    .textGenerator {
+      margin: 20px 0 0 0;
+      padding: 0px;
+      width: 530px;
+      float: right;
+    }
+
+    .my_btn {
+      padding:5px;
+      float: right;
+      display: block;
+    
+    }
+
+    footer {
+    	font-size: 10px;
+    	text-align: center;
+    	margin: 110px 0 10px 0;
+    }
+
+    footer p {
+    	margin: 4px 0 0 0;
+    }
+
+    footer img {
+    	width: 100px;
+    	margin: 0 0 0 3px;
+    }
+
+    body {
+    	padding: 0;
+    }
+
+    a:hover {
+    	text-decoration: none;
+    	color: #048bcf;
+    }
+
+    a {
+    	text-decoration: none;
+    	color: #04a6f7;
+    }
+
