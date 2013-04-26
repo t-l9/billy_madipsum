@@ -2,7 +2,11 @@
 <html>
 	<head>
 		<meta charset=utf-8>
-		<title>Billy Madipsum</title>
+    <meta name="description" content="Billy Madison Lorem Ipsum Generator">
+    <meta name="keywords" content="Lorem Ipsum, Hipster Ipsum, Billy Madison, Filler Text, Web Development, Dummy Text">
+		<meta name="author" content="Timothy Lauter in conjuction with Impart Creative">
+    <title>Billy Madipsum</title>
+      <link rel="shortcut icon" type="image/x-icon" href="bootstrap/img/toodamnhot.ico" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="bootstrap/js/textGenerator.js"></script>
 		<script src="bootstrap/js/bootstrap.js"></script>
@@ -20,6 +24,8 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+
+    <!--CAROUSEL-->
 
      <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
@@ -57,25 +63,33 @@
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
+    </div>
+
+    <!-- /.carousel -->
 	
     <div class="container">
     	<div class="row">
 			<div class="span4 ipsumWrap">
-				<h4>Roughly, how many characters would you like?</h4>
+				<h4>Pick your length type.</h4>
 				<div class="input-append">
-					<input name="characterNum" class="span2 ipsumInput" type="text" value="250" />
-					<button class="btn ipsum_btn" type="button">Call the Zoo!</button>
+					<input name="ipsumLength" class="span2 ipsumInput" type="text" value="250" />
+					<button class="btn ipsum_btn" type="button">Call the zoo!</button>
 				</div>
-			</div>
-		    <div class="textGenerator span8"></div>
-
-    	</div>
-      <footer>
+        <label><input class="radio" type="radio" value="word" name="lengthType" checked="checked" /> Words</label>
+        <label><input class="radio" type="radio" value="char" name="lengthType" /> Characters</label>
+          <footer>
         <div class="fb-like" data-href="http://www.billymadipsum.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
-        <p>Created by: Timothy Lauter in conjunction with</p>
+        <p>Created by: <a href="mailto:tim@impartcreative.com">Timothy Lauter</a> in conjunction with</p>
         <a href="http://www.impartcreative.com"><img src="bootstrap/img/impartcreative.png" /></a>
       </footer>
+			</div>         
+      <div class="text">
+        <h4>Copy &amp; Paste</h4>
+		    <div class="textGenerator span8">
+          <pre><code>Of course I peed my pants, everyone my age pees their pants. I ate some Triscuit crackers in the car, you should have had some. Knibb High football rules! This guy can stay in my room, I can tell you that much. I thought I was your snack-pack? When I graduated first grade, all my dad did was tell me to get a job.</code></pre>
+        </div>
+      </div>
+    	</div>
     </div> <!-- /container -->
 
     <script type="text/javascript">

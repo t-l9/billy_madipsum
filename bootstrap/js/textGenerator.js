@@ -1,9 +1,20 @@
 $(document).ready(function() {
-	$('.textGenerator').html('<pre><code>'+'Jack Nicholson now? Or 1974?'+'</code></pre>');
-	$('.ipsum_btn').click(function() {
-		var ipsum 		 = '';
-		var quote_length = $('input[name=characterNum]'); // characters
-		var quotes       = [
+	// app options
+	var options = {
+		max_word : 1000
+	}
+
+	//ipsum that shit
+	$('.ipsum_btn').click(make_the_ipsum);
+	$('input[name=ipsumLength]').keyup(function(e){
+		if(e.keyCode==13) make_the_ipsum();
+	});
+
+	
+});
+
+function make_the_ipsum() {
+	var quotes = [
 					"Sun-tan lotion is good for me, you protect me, tee hee hee.",
 					"Nudie magazine day!",
 					"What's today? October.",
@@ -97,7 +108,7 @@ $(document).ready(function() {
 					"You know how badly I could beat you, right?",
 					"OW! Your tearing my ear off.",
 					"I've been physically abused in the ear.",
-					" I see your lips moving but I can't make out the words.",
+					"I see your lips moving but I can't make out the words.",
 					"Oh Veronica Vaughn so hot want to touch the heiney.",
 					"Kid can't even read.",
 					"Eric, is pregnant?",
@@ -123,23 +134,44 @@ $(document).ready(function() {
 					"The Danny McGrath who graduated from Knibb Highschool in 1984?",
 					"In June 1983 he sat on some guy's head and killed him.",
 		];
+	var ipsum = "";
+	var split = 0;
+	var ipsum_length = parseInt($('input[name=ipsumLength]').val()); // length of the ipsum
+	var ipsum_type = $('input[name=lengthType]:checked').val(); // length of the ipsum
 
-		quotes.sort( function() { 
-			return 0.5 - Math.random();
-		});
 
-		while ( ipsum.length < quote_length.val() ) {
+	// shuffle the quote
+	quotes.sort( function() { 
+		return 0.5 - Math.random();
+	});
+
+	if ( ipsum_type == 'char') {
+		while ( ipsum.length < ipsum_length ) {
 			if(quotes.length > 0) {
-				ipsum = ipsum + quotes.pop() + ' ' ;
+				ipsum += quotes.pop() + ' ' ;
 			} else {
 				break;
 			}
-		}
-				
-		$('.textGenerator').html('<pre><code>'+ipsum+'</code></pre>');	
-	})
-	
-});
+		} 
+	} else {
+		while ( split < ipsum_length ) {
+			if(quotes.length > 0) { 
+				ipsum += quotes.pop() + ' ' ;
+			} else {
+				break;
+			}
+			split = ipsum.split(' ', ipsum_length).length;
+		} 
+
+		// double check the length of your ipsum
+		if (ipsum.length > ipsum_length) ipsum = ipsum.split(' ', ipsum_length).join(' ');
+
+	}
+
+
+	$('code').html(ipsum);
+
+}
 
 
 

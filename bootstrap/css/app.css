@@ -16,7 +16,14 @@
     }
 
     .textGenerator {
-      margin: 20px 0 0 0;
+      margin: 0px 0 0 0;
+      padding: 0px;
+      width: 530px;
+      float: right;
+    }
+
+    .text {
+      margin: 10px 0 0 0;
       padding: 0px;
       width: 530px;
       float: right;
@@ -31,8 +38,7 @@
 
     footer {
     	font-size: 10px;
-    	text-align: center;
-    	margin: 110px 0 10px 0;
+    	margin: 15px 0 10px 0;
     }
 
     footer p {
@@ -57,4 +63,27 @@
     	text-decoration: none;
     	color: #04a6f7;
     }
+
+    ul#lengthTypes {
+    	margin: 0;
+    	padding: 0;
+    	float: left;
+    }
+
+    ul#lengthTypes li {
+    	float: left;
+    }
+
+    input.radio {
+    	
+    	padding:0;
+    	margin:0 4px 2px 2px;
+    }
+
+    h4.copyPaste {
+    	margin: 20px 0 0 0px;
+    	padding: 0;
+    }
+
+
 
