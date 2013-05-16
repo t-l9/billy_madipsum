@@ -152,7 +152,15 @@ function make_the_ipsum() {
 			} else {
 				break;
 			}
-		} 
+		}
+		if ( ipsum.length > ipsum_length ) {
+			
+			var big_ipsum     = ipsum.length;
+			var sub           = ipsum.length - ipsum_length;
+			var needed_length = big_ipsum - sub;
+
+			ipsum = ipsum.split('' , needed_length);
+		}
 	} else {
 		while ( split < ipsum_length ) {
 			if(quotes.length > 0) { 
@@ -165,7 +173,6 @@ function make_the_ipsum() {
 
 		// double check the length of your ipsum
 		if (ipsum.length > ipsum_length) ipsum = ipsum.split(' ', ipsum_length).join(' ');
-
 	}
 
 
