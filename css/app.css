@@ -1,5 +1,3 @@
-
-
     .ipsumWrap {
       margin: 10px 0 0 40px;
       padding: 0px;
@@ -33,7 +31,7 @@
       padding:5px;
       float: right;
       display: block;
-    
+
     }
 
     footer {
@@ -75,7 +73,7 @@
     }
 
     input.radio {
-    	
+
     	padding:0;
     	margin:0 4px 2px 2px;
     }
@@ -88,4 +86,3 @@
     p {margin-bottom: 1em; }
 
     .social { margin: 25px 0 15px; }
-
